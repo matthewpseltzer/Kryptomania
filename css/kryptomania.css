@@ -1,0 +1,117 @@
+body {
+  background-image: url("../images/aluminum.jpg"); /* has a steel-like appearance */
+}
+header {
+  background-color: black;
+  text-align: center; 
+  }
+.logotext {
+  list-style-image: url('../images/logotext_50_pct.png');
+ }
+.header_insignia{
+  display: none;
+}
+.li_nav{
+  text-decoration: none;
+  list-style-type:none;
+  list-style-image: url("../images/insignia_sm.jpg");
+}
+hr {
+  background-color: black;
+}
+footer{
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-family: Share, cursive;
+}
+.kvariety{
+  pointer-events: none;
+}
+audio{
+  display: none;
+}
+.upupandaway{
+  display: none;
+}
+reset{
+  font-family: Share, cursive;
+}
+submit{
+  font-family: Share, cursive;
+}
+.adcopy{
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+h1{
+  font-family: "Diplomata SC", cursive;
+  font-size: 20px;
+} 
+form input, select{
+  font-family: Share, cursive;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+option{
+  font-family: Share, cursive;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.vintage{
+  display: none;
+}
+
+/* default media queries for mobile devices end here */
+
+/* media query for tablets */
+@media screen and (min-width: 768px) {
+  .li_nav{
+    list-style-image: none;
+    display: inline-block;
+    font-size: 20px;
+  }
+  .ul_horiz{
+    text-align: center;
+    text-decoration: none;
+    font-family: Share, cursive;    
+  }
+  .signup{
+    background-image: url("../images/postcard2.jpg");
+  }
+  .header_insignia{
+    display: inline-block;
+  }
+  .header_insignia_sm{
+    display: none;
+  }
+  .no_style{
+    text-decoration: none;
+    font-family: Share, cursive;
+  } 
+  .logotext {
+    list-style-image: url('../images/logotext.png');
+   }
+}    
+/* media query for desktops */
+@media screen and (min-width: 1024px) {
+   .kvariety {
+    pointer-events: auto;  
+  }
+  audio{
+    display: inline;    
+  }
+  .upupandaway{
+      display: inline;
+      text-align: center;
+  }
+  .logotext {
+    list-style-image: url('../images/logotext_133_pct.png');
+   }
+  .vintage{
+    display: block;
+  }
+}    
