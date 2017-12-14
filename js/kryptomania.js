@@ -1,97 +1,110 @@
 // Matthew P. Seltzer
 // Dec. 12, 2017
-// mailinglist.js
+// kryptomania.js
 "use strict";
-/////////////////////////////////////////////////////////////////////////////
-// Regular expression validation notes:
-//
-// First name: all alpha characters, space, hyphen, apostrophe
-//
-// Last name: all alpha characters, space, hyphen, apostrophe
-//
-// First address line: all alphanumeric characters, space, hyphen, apostrophe
-//
-// Second address line: all alphanumeric characters, space, hyphen, apostrophe
-//
-// Apt./suite/etc.: all alphanumeric characters, space, dot (period)
-//
-// City: all alpha characters, space, hyphen
-//
-// U.S. State: self-validating (from dropdown)
-//
-// Zip code: numbers (but scientific notation not allowed)
-/////////////////////////////////////////////////////////////////////////////
+function setUpQuiz(){    
+    var correctAnswers = [1,2,0];
+    var responses = [];
+    var newField;
+    var quizForm = document.getElementById("quizForm");
+    var quizQuestions = ["The mother of Superman's son is ",
+                          "During his Superboy career in Smallville, Superman's secret identity was known by ",
+                          "Supergirl's adoptive parents were "];
+    var choices =[["Lori Lemaris","Lois Lane","Lana Lang","Luma Lynai"],
+                  ["Lana Lang","Lex Luthor","Pete Ross","Bruce Wayne"],
+                  ["Zor-El and Alura", "Jor-El and Lara", "Van-Zee and Sylvia", "Fred and Edna Danvers"]
+                 ];                      
+    for (i= 0; i < quizQuestions.length - 1; i++){
+        responses.push("");
+        newField = document.createElement("input");
+        newField.type = "hidden";
+        newField.name = "q" + i.toString;
+        newField.value = quizQuestions[i];
+        quizForm.appendChild(newField);
+        newField = "";
 
-/*
-var maxFirstNameLen = 15;
-var maxLastNameLen = 35;
-var maxAddressLine1Len = 20;
-var maxAddressLine2Len = 20;
-var maxAptSuiteEtcLen = 10;
-var maxCityNameLen = 20;
-var maxZipCodeLen = 10;
-*/
-
-
-function toggleOptOut(){
-    var chk = document.getElementById("isOptOut");
-    var email = document.getElementById("emailAddress");
-    var label = document.getElementById("emailAddressLabel");
-    if (chk.checked === true) 
-    {
-      email.hidden = true;
-      label.hidden = true;
+        newField = document.createElement("input");
+        newField.type = "hidden";
+        newField.id = "a" + i.toString;
+        newField.value = correctAnswers[i];
+        quizForm.appendChild(newField);
+        newField = "";
+       
+        // create hidden fields to contain user responses
+        newField = document.createElement("input");
+        newField.type = "hidden";
+        newField.id = "r" + i.toString;
+        newField.value = "";
+        quizForm.appendChild(newField);
+        newField = "";
+        // create hidden fields to contain radio button label text for choices
+        for (j= 0; j < 4; j++){
+            newField = document.createElement("input");
+            newField.type = "hidden";
+            newField.id = "c" + i.toString + "_" + j.toString;
+            newField.value = choices[i,j];
+            quizForm.appendChild(newField);
+            newField = "";
+        }
+   
     }
-    else
-    {
-      email.hidden = false;
-      label.hidden = false;
+    newField = document.createElement("input");
+    newField.type = "hidden";
+    newField.id = "currentQuestion";
+    newField.value = 0;
+    quizForm.appendChild(newField);
+    newField = "";
+ 
+    newField = document.createElement("input");
+    newField.type = "hidden";
+    newField.id = "numberCorrect";
+    newField.value = 0;
+    quizForm.appendChild(newField);
+    newField = "";
+}
+
+function nextQuestionNumber(){
+    if(getElementById("currentQuestion").value < quizQuestions.length){
+        getElementById("currentQuestion").value += 1;  
     }
 }
 
-/*
-function hideVintage(){
-    var vintage =  document.getElementById("superman_vintage"); 
-    vintage.display = none; 
+function previousQuestionNumber(){
+    if(getElementById("currentQuestion").value > 0){
+        getElementById("currentQuestion").value -= 1;  
+    }
 }
 
-function showVintage(){
-    var vintage =  document.getElementById("superman_vintage"); 
-    vintage.display = block; 
+function setFinalScore(){
+  for (i = 0; i < quizQuestions.length; i++){
+      if (correctAnswers[i] === document.getElementById("r" + i.toString).value){
+          document.getElementById("numberCorrect").value +=1;
+      }
+  }
 }
-*/
 
 function createEventListeners(){
-    var chk = document.getElementById("isOptOut");
-    chk.addEventListener("click",toggleOptOut, false);
-/*
-    var reset = document.getElementById("reset");
-    reset.addEventListener("reset", hideVintage, false);
 
-    var submit = document.getElementById("submit");
-    reset.addEventListener("submit", showVintage, false);
+    if (window.addEventListener){
+        window.addEventListener("load",setupQuiz, false);
+    }
+    else if (window.attachEvent)
+    {
+        window.attachEvent("onload, setupQuiz");
+    }    
+    
+}
 
-    var firstName = document.getElementById("firstName");
-    firstName.addEventListener("click",setMaxNumChars, false);  
-
-    var lastName = document.getElementById("lastName");
-    lastName.addEventListener("click",setMaxNumChars, false);
-
-    var addressLine1 = document.getElementById("addressLine1");
-    addressLine1.addEventListener("click",setMaxNumChars, false);
-
-    var aptSuiteEtc = document.getElementById("aptSuiteEtc");
-    aptSuiteEtc.addEventListener("click",setMaxNumChars, false);
-
-    var cityName = document.getElementById("cityName");
-    cityName.addEventListener("load",setMaxNumChars, false);
-
-    var zipCode = document.getElementById("zipCode");
-    zipCode.addEventListener("click",setMaxNumChars, false);
-*/   
+function addEventListener(){
+    createEventListeners();
 }
 
 
-if (window.addEventListener) {
-    window.addEventListener("load", createEventListeners, false);
-}
+
+// create a function to determine which radio button was clicked (response value)
+
+// create a function to populate the labels containing the radio button descriptive text
+
+
+
+
