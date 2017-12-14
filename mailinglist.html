@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/kryptomania.css">
+  <link href="https://fonts.googleapis.com/css?family=Share" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet"> 
+  <title>Become a Kryptomaniac</title>
+</head>
+<body>   
+    <header>
+        <img class="header_insignia" src = "images/insignia.jpg"/>
+        <img class = "header_logo" src = "images/logotext_33_pct.png"/>
+        <img class="header_insignia" src = "images/insignia.jpg"/>
+    </header>      
+    <nav>
+        <ul class="ul_horiz">
+            <li class="li_nav"><a class="no_style" href="index.html">Welcome to Kryptomania!</a></li>
+            <li class="li_nav"><a class="no_style" href="topsellers.html">Top Sellers</a></li>
+            <li class="li_nav"><a class="no_style" href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Subscribe to Our Newsletter</h1>
+        <p class="adcopy">Don't be a stranger--before you leave, if you haven't already done so, 
+        please sign our guestbook so that you may receive email/snail mail 
+        notifications from us regarding new products--we appreciate your interest!
+        </p>
+    </section>
+    <section> 
+        <form action="mailinglist.html">
+            <label for="firstName">First name:</label>
+            <input type="text" required="true" id="firstName"/>
+            <br>
+            <label for="lastName">Last name:</label>
+            <input type="text" required="true" id="lastName"/>
+            <br>            
+            <label for="addressLine1">Address line 1:</label>
+            <input type="text" required="true" id="addressLine1"/>
+            <br>
+            <label for="addressLine2">Address line 2:</label>
+            <input type="text" id="addressLine2"/>
+            <br>
+            <label for="aptSuiteEtc">Apt., suite, etc.:</label>
+            <input type="text" id="aptSuiteEtc"/>
+            <br>
+            <label for="cityName">City:</label>
+            <input type="text" required="true" id="cityName"/>
+            <br>
+            <label for="usState">U.S. State:</label>
+            <select id="usState">
+                <option value="">Please make a selection:</option>
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AR">AR</option>	
+                <option value="AZ">AZ</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DC">DC</option>
+                <option value="DE">DE</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="IA">IA</option>	
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="MA">MA</option>
+                <option value="MD">MD</option>
+                <option value="ME">ME</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MO">MO</option>	
+                <option value="MS">MS</option>
+                <option value="MT">MT</option>
+                <option value="NC">NC</option>	
+                <option value="NE">NE</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>			
+                <option value="NV">NV</option>
+                <option value="NY">NY</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WI">WI</option>	
+                <option value="WV">WV</option>
+                <option value="WY">WY</option>
+                </select>	
+            <br>
+            <label for="zipCode">Zip code:</label>            
+            <input type="text" required="true" id="zipCode"/>
+            <br>
+            <input type="checkbox" id="isOptOut">
+            <label for="isOptOut" id="isOptOutLabel">(I do not wish to receive emails from Kryptomania at this time.)</label>
+            <br>
+            <label for="emailAddress" id="emailAddressLabel">Email address:</label>
+            <input type="text" id="emailAddress"/>
+            <br>
+            <br>
+            <div>
+                <input type="submit" id="submit" value="Up, Up and Away!"/>
+                <input type="reset" id="reset" value="Start Over"/>
+            </div>
+            <div id="superman_vintage">   
+                <img src="images/superman_vintage.gif"/>
+            <div>
+        </form> 
+    </section>
+    <footer>
+        <p class="footer_blurb">Copyright &#169 2017, Kryptomania</p>    
+    </footer>
+    <script src="js/kryptomania.js"></script>
+</body>
+</html>
