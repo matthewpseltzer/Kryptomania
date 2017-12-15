@@ -62,8 +62,10 @@ option{
   font-size: 16px;
   font-weight: bold;
 }
-#superman_vintage{
-  display: none;
+#next{
+  background-image: url("../images/superman_vintage_next.gif");
+  width: 270px;
+  height: 205px;
 }
 label {
   font-family: "Cormorant Garamond", cursive;
@@ -86,7 +88,7 @@ label {
 .italic{
   font-style: italic;
 }
-.quizForm{
+#quiz{
   display: block;
 }
 /* default media query for mobile devices ends here */
@@ -120,11 +122,9 @@ label {
     list-style-image: url('../images/logotext.png');
   }
 
-  .floatleft{
+  .floatleft, #moveNext{
     float: left;
-  }
-   
-  
+  }   
 }    
 /* media query for desktops */
 @media screen and (min-width: 1024px) {
