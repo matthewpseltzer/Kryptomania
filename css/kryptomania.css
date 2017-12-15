@@ -14,11 +14,16 @@ header {
 a {
   text-decoration: none;
   font-family: Share, cursive;
+
+   
 }
 .li_nav{
   list-style-type:none;
   list-style-image: url("../images/insignia_sm.jpg");
-  background-color: darkgrey;    
+  background-color: white; 
+  border-width: 0.1em;
+  border-color: black;
+  border-style: solid;
 }
 hr {
   background-color: black;
@@ -30,9 +35,6 @@ footer{
   font-family: Share, cursive;
 }
 audio{
-  display: none;
-}
-.upupandaway{
   display: none;
 }
 reset{
@@ -81,9 +83,10 @@ label {
   pointer-events: none; /* turns off tooltips in mobile mode */
   float: none;
 } 
-.map{
+.map, .upupandaway, .postcards{
   max-width: 100%;
   height: auto;
+  text-align: center;
 }
 .italic{
   font-style: italic;
@@ -91,6 +94,7 @@ label {
 #quiz{
   display: block;
 }
+
 /* default media query for mobile devices ends here */
 
 /* media query for tablets */
