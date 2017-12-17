@@ -5,17 +5,12 @@ header {
   background-color: black;
   text-align: center; 
   }
-.logotext {
-  list-style-image: url('../images/logotext_50_pct.png');
- }
 .header_insignia{
   display: none;
 }
 a {
   text-decoration: none;
   font-family: Share, cursive;
-
-   
 }
 .li_nav{
   list-style-type:none;
@@ -58,7 +53,6 @@ form input, select{
   font-size: 16px;
   font-weight: bold;
 }
-
 option{
   font-family: Share, cursive;
   font-size: 16px;
@@ -109,9 +103,6 @@ label {
     text-decoration: none;
     font-family: Share, cursive;    
   }
-  .signup{
-    background-image: url("../images/postcard2.jpg");
-  }
   .header_insignia{
     display: inline-block;
   }
@@ -122,13 +113,12 @@ label {
     text-decoration: none;
     font-family: Share, cursive;
   } 
-  .logotext {
-    list-style-image: url('../images/logotext.png');
-  }
-
   .floatleft, #moveNext{
     float: left;
-  }   
+  } 
+  .header_logo {
+    background-image: url('../images/logotext.png');
+  }  
 }    
 /* media query for desktops */
 @media screen and (min-width: 1024px) {
@@ -142,9 +132,9 @@ label {
       display: inline;
       text-align: center;
   }
-  .logotext {
-    list-style-image: url('../images/logotext_133_pct.png');
-   }
+  .header_logo {
+    background-image: url('../images/logotext_133_pct.png');
+  }
   #superman_vintage{
     display: block;
   } 
